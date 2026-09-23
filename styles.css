@@ -30,10 +30,11 @@ body {
     border-radius: 5px;
     margin-top: 20px;
     border: none;
-    background-color: #2b431d;
-    color: #F7F5EF;
+    background-color: #f7f0db;
+    color: #2b431d;
     padding: 9px 16px;
     cursor: pointer;
+    font-weight: 700;
     font-size: 30px;
 }
 
