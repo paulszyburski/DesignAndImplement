@@ -1,0 +1,3 @@
+Tool: built-in image_gen
+
+Clean up the attached transparent cream garden logo. Keep the large leaf, winding path, ground curve and small plant design. Remove ALL scattered white speckles, noise, ragged fringes, debris and artifacts around and between the shapes. Smooth precise solid cream silhouettes with clean antialiased edges, like a professionally exported vector logo. All negative space including leaf vein must be completely empty transparent alpha. No circle or colored background. Flat cream #F7F5EF shapes only, no texture or shadows. Preserve layout.

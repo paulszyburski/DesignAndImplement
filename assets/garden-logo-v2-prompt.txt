@@ -1,0 +1,3 @@
+Tool: built-in image_gen
+
+Edit this existing garden logo only by recoloring its green circular background and green internal areas to a uniform flat dark olive green #26351E (RGB 38,53,30), matching a website navigation bar. Preserve the cream #F7F5EF leaf, winding path and small plant shapes, their exact placement, proportions and composition. Remove mottling and gradients from the green so the color is flat. Keep the outside of the circular badge genuinely transparent. No new elements, no text, no shadow. Same square framing.

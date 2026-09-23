@@ -1,0 +1,3 @@
+Tool: built-in image_gen
+
+Edit the supplied garden banner photograph. Selectively make the plants immediately bordering both sides of the stone path moderately brighter and more vibrant, with richer natural greens and slightly clearer leaf detail, so they stand out against the darker surrounding plants. Keep the large outer shrubs, background trees and leftmost foliage dark forest green. Restrained, believable photographic color grading, soft natural light; no neon greens, oversaturation, artificial glow, HDR effect or exaggerated contrast. Preserve the exact composition, panoramic 3:1 framing, path, architecture, rocks, plant placement and realistic textures. No added objects or text.
