@@ -6,7 +6,7 @@
 
 body {
     margin: 0;
-    background-color: #F7F5EF;
+    background-color: #f7f0db;
     color: #24382E;
 }
 
@@ -20,7 +20,7 @@ body {
     padding: 16px 24px;
     margin-bottom: 24px;
     background-color: #2b431d;
-    color: #F7F5EF;
+    color: #f7f0db;
     /* color: #F7F5EF*/
     /* color: #f1fbd8*/
 }
@@ -110,7 +110,7 @@ body {
     justify-content: center;
     padding: 16px;
     background-color: rgba(0, 0, 0, 0.3);
-    color: #F7F5EF;
+    color: #f7f0db;
 }
 
 .garden-overlay h1 {
