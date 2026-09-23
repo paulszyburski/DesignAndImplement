@@ -19,8 +19,22 @@ body {
     gap: 24px;
     padding: 16px 24px;
     margin-bottom: 24px;
-    background-color: #26351E;
+    background-color: #2b431d;
     color: #F7F5EF;
+    /* color: #F7F5EF*/
+    /* color: #f1fbd8*/
+}
+
+.quote-button {
+    font-family: inherit;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: none;
+    background-color: #2b431d;
+    color: #F7F5EF;
+    padding: 9px 16px;
+    cursor: pointer;
+    font-size: 20px;
 }
 
 .brand {
