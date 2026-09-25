@@ -1,28 +1,94 @@
-<form action="/api/quote" method="POST">
-    <input
-        type="text"
-        name="name"
-        placeholder="Imię i nazwisko"
-        required
-    >
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css?v=6">
+    <title>Document</title>
+</head>
+<body>
+    <header class="navigation">
+        <a class="brand" href="index.html">
+            <img src="../assets/garden-logo-green-circle.png" alt="" width="64">
 
-    <input
-        type="email"
-        name="email"
-        placeholder="Email"
-        required
-    >
+            <div class="brand-text">
+                <span class="brand-name">Design and Implement</span>
+                <span class="brand-description">Projekt, realizacja, pielęgnacja, ogrodów</span>
+            </div>
+        </a>
 
-    <input
-        type="tel"
-        name="phone"
-        placeholder="Telefon"
-    >
+        <nav class="navigation-links" aria-label="Menu główne">
+            <a href="../index.html">Strona Główna</a>
+            <a href="about.html">O nas</a>
+            <a href="services.html">Usługi</a>
+            <a href="portfolio.html">Nasze prace</a>
+            <a href="contact.html">Kontakt</a>
+        </nav>
+    </header>
 
-    <textarea
-        name="message"
-        placeholder="Opisz swój ogród"
-    ></textarea>
+    <main class="hero">
 
-    <button type="submit">Bezpłatna wycena</button>
-</form>
+        <div class="garden">
+            <img
+                class="garden-banner"
+                src="../assets/garden-form-banner-v2.png"
+                alt="Zielony ogród z kamienną ścieżką"
+            >
+
+            <div class="garden-overlay">
+                <form action="/api/quote" method="POST">
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Imię i nazwisko"
+                                required
+                            >
+
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Email"
+                                required
+                            >
+
+                            <input
+                                type="tel"
+                                name="phone"
+                                placeholder="Telefon"
+                            >
+
+                            <button type="submit" class="quote-button">Bezpłatna wycena </button>
+                        </form>
+            </div>
+        </div>
+    </main>
+
+
+
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-left">
+                <h3>Design and Implement</h3>
+                <p>Projekt, realizacja i pielęgnacja ogrodów.</p>
+            </div>
+
+            <div class="footer-right">
+                <p>+48 123 456 789</p>
+                <p>kontakt@designandimplement.com.pl</p>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <a href="../index.html">Strona główna</a>
+            <a href="/pages/about.html">O nas</a>
+            <a href="/pages/services.html">Usługi</a>
+            <a href="/pages/portfolio.html">Nasze prace</a>
+            <a href="/pages/contact.html">Kontakt</a>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2026 Design and Implement. Wszelkie prawa zastrzeżone.
+        </div>
+    </footer>
+</body>
+</html>
