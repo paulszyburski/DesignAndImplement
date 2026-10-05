@@ -1,9 +1,14 @@
-from flask import Flask, request
+from contextlib import asynccontextmanager
+import os
 import sqlite3
+from typing import Annotated
 
-app = Flask(__name__)
+from fastapi import FastAPI, Form
+from fastapi.responses import PlainTextResponse
 
-DB_PATH = "/home/paul/Projects/designandimplement/data/quotes.db"
+DB_PATH = os.environ.get(
+    "QUOTES_DB_PATH", "/home/paul/Projects/designandimplement/data/quotes.db"
+)
 
 
 def init_db():
@@ -20,12 +25,22 @@ def init_db():
         """)
 
 
-@app.post("/api/quote")
-def submit_quote():
-    name = request.form["name"]
-    email = request.form["email"]
-    phone = request.form.get("phone", "")
-    message = request.form.get("message", "")
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    init_db()
+    yield
+
+
+app = FastAPI(lifespan=lifespan)
+
+
+@app.post("/api/quote", response_class=PlainTextResponse)
+def submit_quote(
+    name: Annotated[str, Form(min_length=1)],
+    email: Annotated[str, Form(min_length=1)],
+    phone: Annotated[str, Form()] = "",
+    message: Annotated[str, Form()] = "",
+):
 
     with sqlite3.connect(DB_PATH) as conn:
         conn.execute(
@@ -40,5 +55,6 @@ def submit_quote():
 
 
 if __name__ == "__main__":
-    init_db()
-    app.run(host="127.0.0.1", port=5000)
+    import uvicorn
+
+    uvicorn.run(app, host="127.0.0.1", port=5000)
