@@ -1,34 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles.css?v=7">
-    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css?v=11">
+    <meta name="description" content="Poznaj Design and Implement. Projektowanie, realizacja i pielęgnacja ogrodów dopasowanych do Twoich potrzeb.">
+    <title>O nas | Design and Implement</title>
 </head>
 <body>
 
     <header class="navigation">
-        <a class="brand" href="index.html">
+        <a class="brand" href="../index.html">
             <img src="../assets/garden-logo-green-circle.png" alt="" width="64">
 
             <div class="brand-text">
                 <span class="brand-name">Design and Implement</span>
-                <span class="brand-description">Projekt, realizacja, pielęgnacja, ogrodów</span>
+                <span class="brand-description">Projekt, realizacja i pielęgnacja ogrodów</span>
             </div>
         </a>
 
         <nav class="navigation-links" aria-label="Menu główne">
             <a href="../index.html">Strona Główna</a>
-            <a href="about.html">O nas</a>
+            <a href="about.html" aria-current="page">O nas</a>
             <a href="services.html">Usługi</a>
             <a href="portfolio.html">Nasze prace</a>
             <a href="contact.html">Kontakt</a>
         </nav>
     </header>
     
-    <main class="hero">
-        <h1 class="construction">Strona w przygotowaniu.</h1>
+    <main class="content-page">
+        <section class="page-intro" aria-labelledby="page-title">
+
+            <h1 id="page-title">O nas</h1>
+            <p class="page-lead">Design and Implement zajmuje się projektowaniem, zakładaniem i pielęgnacją ogrodów. Możesz zgłosić się do nas z pustą działką, gotowym projektem lub ogrodem, który wymaga zmian.</p>
+        </section>
+
+        <section class="about-story" aria-labelledby="approach-title">
+            <img src="../assets/about-garden.png" alt="Drewniany taras z fotelami wśród hortensji, lawendy i traw ozdobnych" width="1385" height="1136">
+            <div>
+
+                <h2 id="approach-title">Najpierw poznajemy działkę i Twoje plany</h2>
+                <p>Zanim zaczniemy projekt, pytamy o to, czego potrzebujesz w ogrodzie. Czy ma być miejsce na stół, zabawę z dziećmi, warzywnik? Ile czasu chcesz poświęcać na pielęgnację?</p>
+                <p>Te odpowiedzi pomagają ustalić układ ogrodu i dobrać rośliny. Uwzględniamy też nasłonecznienie, glebę i to, jak nasadzenia będą wyglądały za kilka lat.</p>
+                <a class="text-link" href="contact.html">Porozmawiajmy o Twoim ogrodzie</a>
+            </div>
+        </section>
+
+        <section class="page-section" aria-labelledby="process-title">
+
+            <h2 id="process-title">Jak wygląda współpraca</h2>
+            <ol class="process-grid">
+                <li>
+
+                    <h3>Rozmowa i ustalenia</h3>
+                    <p>Rozmawiamy o pomysłach, możliwościach działki i budżecie. Ustalamy, co jest dla Ciebie najważniejsze.</p>
+                </li>
+                <li>
+
+                    <h3>Projekt i prace w ogrodzie</h3>
+                    <p>Planujemy układ ogrodu i dobieramy rośliny do warunków. Uzgodniony projekt przekładamy na konkretne prace w terenie.</p>
+                </li>
+                <li>
+
+                    <h3>Pielęgnacja</h3>
+                    <p>Po zakończeniu prac możemy pomóc w pielęgnacji ogrodu. Ustalamy, które zabiegi są potrzebne i kiedy je wykonać.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section class="page-cta" aria-labelledby="cta-title">
+            <div>
+                <h2 id="cta-title">Masz pomysł na swój ogród?</h2>
+                <p>Planujesz prace w ogrodzie?. Opowiedz nam o swojej przestrzeni.</p>
+            </div>
+            <a class="page-button" href="quote.html">Zamów bezpłatną wycenę</a>
+        </section>
     </main>
 
 
@@ -40,17 +86,17 @@
             </div>
 
             <div class="footer-right">
-                <p>+48 123 456 789</p>
+                <p><a href="tel:+48535920800">+48 535 920 800</a></p>
                 <p>biuro@designandimplement.com.pl</p>
             </div>
         </div>
 
         <div class="footer-links">
             <a href="../index.html">Strona główna</a>
-            <a href="/pages/about.html">O nas</a>
-            <a href="/pages/services.html">Usługi</a>
-            <a href="/pages/portfolio.html">Nasze prace</a>
-            <a href="/pages/contact.html">Kontakt</a>
+            <a href="about.html">O nas</a>
+            <a href="services.html">Usługi</a>
+            <a href="portfolio.html">Nasze prace</a>
+            <a href="contact.html">Kontakt</a>
         </div>
 
         <div class="footer-bottom">

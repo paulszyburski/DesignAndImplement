@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design and Implement — Projektowanie, budowanie, pielęgnowanie ogrodów</title>
-    <link rel="stylesheet" href="styles.css?v=7">
+    <title>Design and Implement | Projektowanie, budowanie, pielęgnowanie ogrodów</title>
+    <meta name="description" content="Projektowanie, realizacja i pielęgnacja ogrodów. Poznaj Design and Implement i zaplanuj przestrzeń do odpoczynku wokół swojego domu.">
+    <link rel="stylesheet" href="styles.css?v=11">
 </head>
 
 <body>
@@ -14,7 +15,7 @@
 
             <div class="brand-text">
                 <span class="brand-name">Design and Implement</span>
-                <span class="brand-description">Projekt, realizacja, pielęgnacja, ogrodów</span>
+                <span class="brand-description">Projekt, realizacja i pielęgnacja ogrodów</span>
             </div>
         </a>
 
@@ -26,7 +27,7 @@
         </nav>
     </header>
 
-    <main class="hero">
+    <main class="home-page">
         <div class="garden">
             <img
                 class="garden-banner"
@@ -35,13 +36,55 @@
             >
 
             <div class="garden-overlay">
-                <h1>Twój wymarzony ogród</h1>
-                <p>Zaprojektujemy i zrealizujemy go dla Ciebie.</p>
-                <button onclick="window.location.href='/pages/quote.html'" class="quote-button">Zamów bezpłatną wycenę</button>
+                <h1>Projektujemy i zakładamy ogrody</h1>
+                <p>Od projektu i nasadzeń po regularną pielęgnację.</p>
+                <a href="pages/quote.html" class="quote-button home-quote-link">Zamów bezpłatną wycenę</a>
             </div>
         </div>
 
-        <p class="construction">Strona w przygotowaniu.</p>
+        <div class="content-page">
+            <section class="page-intro home-intro" aria-labelledby="home-intro-title">
+
+                <h2 id="home-intro-title">Ogród, z którego dobrze się korzysta</h2>
+                <p class="page-lead">Projektujemy ogrody przydomowe, wykonujemy nasadzenia i dbamy o zieleń. Przy planowaniu bierzemy pod uwagę warunki na działce, sposób korzystania z ogrodu i czas, jaki możesz poświęcić na jego pielęgnację.</p>
+                <a class="text-link" href="pages/about.html">Poznaj nasze podejście</a>
+            </section>
+
+            <section class="page-section" aria-labelledby="home-services-title">
+
+                <h2 id="home-services-title">Czym się zajmujemy</h2>
+                <div class="home-services">
+                    <article>
+
+                        <h3>Projektowanie</h3>
+                        <p>Planujemy rabaty, ścieżki i miejsca do odpoczynku. Dobieramy rośliny do gleby, nasłonecznienia i wielkości działki.</p>
+
+                    </article>
+                    <article>
+
+                        <h3>Realizacja</h3>
+                        <p>Przygotowujemy teren i wykonujemy nasadzenia według ustalonego projektu. Zakres i kolejność prac omawiamy przed rozpoczęciem realizacji.</p>
+
+                    </article>
+                    <article>
+
+                        <h3>Pielęgnacja</h3>
+                        <p>Zajmujemy się pielęgnacją roślin i sezonowymi pracami w ogrodzie. Zakres prac dopasowujemy do pory roku i stanu zieleni.</p>
+
+                    </article>
+                </div>
+            </section>
+
+
+
+            <section class="page-cta" aria-labelledby="home-cta-title">
+                <div>
+                    <h2 id="home-cta-title">Planujesz prace w ogrodzie?</h2>
+                    <p>Napisz, co chcesz zmienić. Pomożemy określić zakres prac i przygotować wycenę.</p>
+                </div>
+                <a class="page-button" href="pages/quote.html">Zapytaj o wycenę</a>
+            </section>
+        </div>
 
     </main>
 
@@ -53,7 +96,7 @@
             </div>
 
             <div class="footer-right">
-                <p>+48 123 456 789</p>
+                <p><a href="tel:+48535920800">+48 535 920 800</a></p>
                 <p>biuro@designandimplement.com.pl</p>
             </div>
         </div>

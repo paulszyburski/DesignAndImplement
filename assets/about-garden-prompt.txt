@@ -1,0 +1,3 @@
+Generated using the built-in image_gen tool.
+
+Use case: photorealistic-natural. Asset type: About-page photograph for a Polish garden design website. Create a distinct intimate garden scene: a small warm timber terrace with two simple wooden lounge chairs nestled among layered ornamental grasses, white hydrangeas and lavender, mature leafy trees behind, soft late-afternoon sunlight. Editorial landscape photography, realistic natural planting and materials, calm lived-in atmosphere, muted greens and warm cream tones. Eye-level three-quarter view, balanced near-square composition suitable for a 536 by 440 pixel crop. Focus on the seating nook and planting; no central stone path, no people, no text, no logos, no watermark.

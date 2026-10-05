@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles.css?v=7">
-    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css?v=11">
+    <meta name="description" content="Skontaktuj się z Design and Implement. Porozmawiajmy o projekcie, realizacji lub pielęgnacji Twojego ogrodu.">
+    <title>Kontakt | Design and Implement</title>
 </head>
 <body>
 
     <header class="navigation">
-        <a class="brand" href="index.html">
+        <a class="brand" href="../index.html">
             <img src="../assets/garden-logo-green-circle.png" alt="" width="64">
 
             <div class="brand-text">
                 <span class="brand-name">Design and Implement</span>
-                <span class="brand-description">Projekt, realizacja, pielęgnacja, ogrodów</span>
+                <span class="brand-description">Projekt, realizacja i pielęgnacja ogrodów</span>
             </div>
         </a>
 
@@ -23,12 +24,45 @@
             <a href="about.html">O nas</a>
             <a href="services.html">Usługi</a>
             <a href="portfolio.html">Nasze prace</a>
-            <a href="contact.html">Kontakt</a>
+            <a href="contact.html" aria-current="page">Kontakt</a>
         </nav>
     </header>
     
-    <main class="hero">
-        <h1 class="construction">Strona w przygotowaniu.</h1>
+    <main class="content-page">
+        <section class="page-intro" aria-labelledby="page-title">
+
+            <h1 id="page-title">Kontakt</h1>
+            <p class="page-lead">Zadzwoń lub napisz w sprawie projektu, założenia ogrodu albo pielęgnacji. W wiadomości możesz podać lokalizację i krótko opisać planowane prace.</p>
+        </section>
+
+        <div class="contact-single">
+            <section class="contact-details" aria-labelledby="details-title">
+                <h2 id="details-title">Telefon i e-mail</h2>
+                <p>Wybierz najwygodniejszy dla siebie sposób kontaktu.</p>
+                <address>
+                    <div class="contact-method">
+                        <h3>Telefon</h3>
+                        <a href="tel:+48535920800">+48 535 920 800</a>
+                        <p>Zadzwoń, aby porozmawiać o planowanych pracach.</p>
+                    </div>
+                    <div class="contact-method">
+                        <h3>E-mail</h3>
+                        <a href="mailto:biuro@designandimplement.com.pl">biuro@designandimplement.com.pl</a>
+                        <p>Opisz swój pomysł. Możesz dołączyć zdjęcia ogrodu lub plan działki.</p>
+                    </div>
+                </address>
+            </section>
+
+
+        </div>
+
+        <section class="page-cta" aria-labelledby="cta-title">
+            <div>
+                <h2 id="cta-title">Chcesz poznać koszt prac?</h2>
+                <p>Zostaw dane w formularzu bezpłatnej wyceny.</p>
+            </div>
+            <a class="page-button" href="quote.html">Przejdź do wyceny</a>
+        </section>
     </main>
 
 
@@ -40,17 +74,17 @@
             </div>
 
             <div class="footer-right">
-                <p>+48 123 456 789</p>
+                <p><a href="tel:+48535920800">+48 535 920 800</a></p>
                 <p>biuro@designandimplement.com.pl</p>
             </div>
         </div>
 
         <div class="footer-links">
             <a href="../index.html">Strona główna</a>
-            <a href="/pages/about.html">O nas</a>
-            <a href="/pages/services.html">Usługi</a>
-            <a href="/pages/portfolio.html">Nasze prace</a>
-            <a href="/pages/contact.html">Kontakt</a>
+            <a href="about.html">O nas</a>
+            <a href="services.html">Usługi</a>
+            <a href="portfolio.html">Nasze prace</a>
+            <a href="contact.html">Kontakt</a>
         </div>
 
         <div class="footer-bottom">

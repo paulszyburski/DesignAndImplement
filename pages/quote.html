@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles.css?v=7">
-    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css?v=11">
+    <meta name="description" content="Zamów bezpłatną wycenę projektu, realizacji lub pielęgnacji ogrodu. Zostaw dane kontaktowe i zrób pierwszy krok.">
+    <title>Bezpłatna wycena | Design and Implement</title>
 </head>
 <body>
     <header class="navigation">
-        <a class="brand" href="index.html">
+        <a class="brand" href="../index.html">
             <img src="../assets/garden-logo-green-circle.png" alt="" width="64">
 
             <div class="brand-text">
                 <span class="brand-name">Design and Implement</span>
-                <span class="brand-description">Projekt, realizacja, pielęgnacja, ogrodów</span>
+                <span class="brand-description">Projekt, realizacja i pielęgnacja ogrodów</span>
             </div>
         </a>
 
@@ -26,7 +27,7 @@
         </nav>
     </header>
 
-    <main class="hero">
+    <main class="quote-page">
 
         <div class="garden">
             <img
@@ -36,31 +37,52 @@
             >
 
             <div class="garden-overlay">
-                <form action="/api/quote" method="POST">
-                            <input
-                                type="text"
-                                name="name"
-                                placeholder="Imię i nazwisko"
-                                required
-                            >
+                <form class="quote-form" action="/api/quote" method="POST" aria-labelledby="quote-title">
+                    <div class="quote-form-heading">
 
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="Email"
-                                required
-                            >
+                        <h1 id="quote-title">Bezpłatna wycena</h1>
+                        <p>Podaj dane kontaktowe. Skontaktujemy się, żeby omówić zakres prac.</p>
+                    </div>
+                    <div class="quote-field">
+                        <label for="quote-name">Imię i nazwisko <span>(wymagane)</span></label>
+                        <input id="quote-name" type="text" name="name" autocomplete="name" placeholder="Jan Kowalski" required>
+                    </div>
+                    <div class="quote-field">
+                        <label for="quote-email">E-mail <span>(wymagany)</span></label>
+                        <input id="quote-email" type="email" name="email" autocomplete="email" placeholder="jan@przyklad.pl" required>
+                    </div>
+                    <div class="quote-field">
+                        <label for="quote-phone">Telefon <span>(opcjonalnie)</span></label>
+                        <input id="quote-phone" type="tel" name="phone" autocomplete="tel" placeholder="+48 …">
+                    </div>
+                    <button type="submit" class="quote-button">Poproś o bezpłatną wycenę</button>
 
-                            <input
-                                type="tel"
-                                name="phone"
-                                placeholder="Telefon"
-                            >
-
-                            <button type="submit" class="quote-button">Bezpłatna wycena </button>
-                        </form>
+                </form>
             </div>
         </div>
+        <section class="content-page quote-next" aria-labelledby="next-title">
+
+            <h2 id="next-title">Co przygotować do rozmowy?</h2>
+            <p class="quote-next-intro">Przydadzą się zdjęcia ogrodu, jego przybliżona powierzchnia i lokalizacja. Jeśli masz już projekt, również o nim wspomnij.</p>
+            <ol class="process-grid">
+                <li>
+
+                    <h3>Zakres prac</h3>
+                    <p>Ustalimy, czy interesuje Cię projekt nowego ogrodu, jego realizacja czy pielęgnacja istniejącej zieleni.</p>
+                </li>
+                <li>
+
+                    <h3>Działka</h3>
+                    <p>Przygotuj lokalizację, przybliżony metraż i kilka zdjęć działki. Pomogą nam lepiej zrozumieć możliwości ogrodu.</p>
+                </li>
+                <li>
+
+                    <h3>Budżet i termin</h3>
+                    <p>Omówimy priorytety, budżet i preferowany termin, aby dopasować propozycję do Twoich planów.</p>
+                </li>
+            </ol>
+            <p>Wolisz napisać bezpośrednio? <a class="text-link" href="contact.html">Przejdź do kontaktu</a></p>
+        </section>
     </main>
 
 
@@ -73,7 +95,7 @@
             </div>
 
             <div class="footer-right">
-                <p>+48 123 456 789</p>
+                <p><a href="tel:+48535920800">+48 535 920 800</a></p>
                 <p>kontakt@designandimplement.com.pl</p>
             </div>
         </div>
