@@ -6,6 +6,8 @@ from typing import Annotated
 from fastapi import FastAPI, Form
 from fastapi.responses import PlainTextResponse
 
+from .notifications import send_quote_notification
+
 DB_PATH = os.environ.get(
     "QUOTES_DB_PATH", "/home/paul/Projects/designandimplement/data/quotes.db"
 )
@@ -42,6 +44,8 @@ def submit_quote(
     message: Annotated[str, Form()] = "",
 ):
 
+    send_quote_notification(name, email, phone, message)
+
     with sqlite3.connect(DB_PATH) as conn:
         conn.execute(
             """
@@ -50,6 +54,8 @@ def submit_quote(
             """,
             (name, email, phone, message)
         )
+
+    
 
     return "Dziękujemy! Otrzymaliśmy Twoje zgłoszenie."
 
