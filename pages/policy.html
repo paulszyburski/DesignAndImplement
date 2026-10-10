@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css?v=12">
+    <meta name="description" content="Zasady obsługi danych z formularza wyceny i opcjonalnego pliku cookie zapamiętującego wysłanie zapytania.">
+    <title>Polityka prywatności | Design and Implement</title>
+    <script src="../scripts/quote.js?v=1" defer></script>
+</head>
+<body>
+
+    <header class="navigation">
+        <a class="brand" href="../index.html">
+            <img src="../assets/garden-logo-green-circle.png" alt="" width="64">
+
+            <div class="brand-text">
+                <span class="brand-name">Design and Implement</span>
+                <span class="brand-description">Projekt, realizacja i pielęgnacja ogrodów</span>
+            </div>
+        </a>
+
+        <nav class="navigation-links" aria-label="Menu główne">
+            <a href="../index.html">Strona Główna</a>
+            <a href="about.html">O nas</a>
+            <a href="services.html">Usługi</a>
+            <a href="portfolio.html">Nasze prace</a>
+            <a href="contact.html">Kontakt</a>
+        </nav>
+    </header>
+    
+    <main class="content-page policy-page">
+        <section class="page-intro" aria-labelledby="page-title">
+            <h1 id="page-title">Polityka prywatności i plików cookies</h1>
+            <p class="page-lead">Jak korzystamy z danych przekazanych przy zapytaniu o wycenę i jak działa zapamiętanie wysłania formularza.</p>
+        </section>
+        <section aria-labelledby="controller-title">
+            <h2 id="controller-title">Kontakt w sprawach danych</h2>
+            <p>Serwis prowadzi Design and Implement. W sprawach zapytań i prywatności napisz na <a class="text-link" href="mailto:biro@designandimplement.com.pl">biro@designandimplement.com.pl</a> lub zadzwoń pod <a class="text-link" href="tel:+48535920800">+48 535 920 800</a>.</p>
+        </section>
+        <section aria-labelledby="data-title">
+            <h2 id="data-title">Dane z formularza wyceny</h2>
+            <p>Formularz zbiera imię i nazwisko, adres e-mail oraz opcjonalny numer telefonu. Jeśli przekażesz wiadomość, również wykorzystamy ją do obsługi zapytania. Podanie danych jest dobrowolne, ale imię i nazwisko oraz e-mail są potrzebne do wysłania formularza i kontaktu w sprawie wyceny.</p>
+            <p>Dane zapisujemy w bazie zapytań i przekazujemy właścicielowi serwisu w powiadomieniu e-mail, aby mógł odpowiedzieć, omówić zakres prac i przygotować ofertę. Wysłanie formularza nie zamawia odpłatnej usługi i nie oznacza zapisu do newslettera.</p>
+            <p>Podstawą przetwarzania danych potrzebnych do przygotowania oferty są działania na Twoje żądanie przed zawarciem umowy (art. 6 ust. 1 lit. b RODO). Akceptacja tej polityki potwierdza zapoznanie się z zasadami; nie jest zgodą na marketing.</p>
+        </section>
+        <section aria-labelledby="storage-title">
+            <h2 id="storage-title">Przechowywanie i odbiorcy danych</h2>
+            <p>Zapytania znajdują się w bazie danych serwisu i korespondencji e-mail. Okres ich przechowywania powinien być ograniczony do czasu potrzebnego na obsługę zapytania, przygotowanie oferty oraz ewentualnych obowiązków prawnych związanych z dalszą współpracą. Wygaśnięcie pliku cookie nie usuwa zapytania ani wiadomości e-mail.</p>
+            <p>Z danych korzysta właściciel obsługujący zapytanie oraz dostawcy infrastruktury i poczty w zakresie koniecznym do świadczenia tych usług. Powiadomienia są wysyłane za pomocą Gmail (Google); dane z formularza trafiają więc także do usługi pocztowej. Informacje o przetwarzaniu danych przez Google, w tym przetwarzaniu poza Europejskim Obszarem Gospodarczym, opisuje <a class="text-link" href="https://policies.google.com/privacy?hl=pl">polityka prywatności Google</a>.</p>
+        </section>
+        <section aria-labelledby="cookie-title">
+            <h2 id="cookie-title">Zapamiętanie wysłanego zapytania</h2>
+            <p>Przed wysłaniem możesz zaznaczyć opcję „Zapamiętaj wysłanie zapytania w tej przeglądarce”. Jest dobrowolna i domyślnie wyłączona. Możesz wysłać formularz bez jej zaznaczania.</p>
+            <ul>
+                <li><strong>Nazwa pliku cookie:</strong> <code>quote_sent</code>.</li>
+                <li><strong>Zawartość:</strong> wyłącznie wartość <code>1</code>, oznaczająca wysłanie zapytania. Nie zawiera imienia, adresu e-mail, telefonu ani indywidualnego identyfikatora.</li>
+                <li><strong>Cel:</strong> wyświetlenie przypomnienia o wysłanym zapytaniu i ograniczenie przypadkowego ponownego wysłania w tej samej przeglądarce.</li>
+                <li><strong>Czas:</strong> 30 dni od udanego wysłania formularza, chyba że wcześniej usuniesz cookie.</li>
+                <li><strong>Zasięg:</strong> ta witryna i ta przeglądarka. Cookie nie służy do reklamy ani analizy odwiedzin.</li>
+            </ul>
+            <p>Cookie zapisujemy dopiero po zaznaczeniu opcji i potwierdzeniu przyjęcia zapytania. Zablokowanie cookies nie uniemożliwia wysłania formularza. Usunięcie cookie, inna przeglądarka lub tryb prywatny mogą sprawić, że przypomnienie się nie pojawi.</p>
+            <p>Możesz wycofać zgodę na zapamiętanie, usuwając cookie poniższym przyciskiem albo w ustawieniach przeglądarki. Nie usuwa to wcześniej wysłanego zapytania.</p>
+            <button id="forget-quote-cookie" class="page-button" type="button" hidden>Usuń zapamiętanie wysłania</button>
+            <p id="cookie-status" role="status" aria-live="polite" aria-atomic="true"></p>
+        </section>
+        <section aria-labelledby="rights-title">
+            <h2 id="rights-title">Twoje prawa</h2>
+            <p>Na zasadach określonych w RODO możesz żądać dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania oraz przeniesienia danych, gdy ma zastosowanie. W sprawach danych napisz na adres podany powyżej. Możesz również złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych (<a class="text-link" href="https://uodo.gov.pl/">uodo.gov.pl</a>).</p>
+        </section>
+        <section aria-labelledby="resources-title">
+            <h2 id="resources-title">Pozostałe połączenia</h2>
+            <p>Witryna pobiera krój pisma z Google Fonts. Przy jego pobieraniu przeglądarka łączy się z serwerami Google i przekazuje dane techniczne połączenia, takie jak adres IP. Ta usługa jest odrębna od zapamiętania wysłanego zapytania.</p>
+            <p><a class="text-link" href="quote.html">Wróć do formularza wyceny</a></p>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-left">
+                <h3>Design and Implement</h3>
+                <p>Projekt, realizacja i pielęgnacja ogrodów.</p>
+            </div>
+
+            <div class="footer-right">
+                <p><a href="tel:+48535920800">+48 535 920 800</a></p>
+                <p>biro@designandimplement.com.pl</p>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <a href="../index.html">Strona główna</a>
+            <a href="about.html">O nas</a>
+            <a href="services.html">Usługi</a>
+            <a href="portfolio.html">Nasze prace</a>
+            <a href="contact.html">Kontakt</a>
+            <a href="policy.html">Polityka prywatności i cookies</a>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2026 Design and Implement. Wszelkie prawa zastrzeżone.
+        </div>
+    </footer>
+</body>
+</html>

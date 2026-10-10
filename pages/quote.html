@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles.css?v=11">
+    <link rel="stylesheet" href="../styles.css?v=12">
     <meta name="description" content="Zamów bezpłatną wycenę projektu, realizacji lub pielęgnacji ogrodu. Zostaw dane kontaktowe i zrób pierwszy krok.">
     <title>Bezpłatna wycena | Design and Implement</title>
+    <script src="../scripts/quote.js?v=1" defer></script>
 </head>
 <body>
     <header class="navigation">
@@ -55,7 +56,13 @@
                         <label for="quote-phone">Telefon <span>(opcjonalnie)</span></label>
                         <input id="quote-phone" type="tel" name="phone" autocomplete="tel" placeholder="+48 …">
                     </div>
+                    <label class="quote-remember" hidden>
+                        <input type="checkbox" id="quote-remember">
+                        <span>Zapamiętaj wysłanie zapytania w tej przeglądarce przez 30 dni (opcjonalny plik cookie).</span>
+                    </label>
                     <button type="submit" class="quote-button">Poproś o bezpłatną wycenę</button>
+                    <p class="quote-form-note">Klikając przycisk, akceptujesz <a href="policy.html">politykę prywatności i plików cookies</a>. Zapamiętanie wysłania jest dobrowolne.</p>
+                    <p id="quote-status" class="quote-form-note" role="status" aria-live="polite" aria-atomic="true"></p>
 
                 </form>
             </div>
@@ -96,7 +103,7 @@
 
             <div class="footer-right">
                 <p><a href="tel:+48535920800">+48 535 920 800</a></p>
-                <p>kontakt@designandimplement.com.pl</p>
+                <p>biro@designandimplement.com.pl</p>
             </div>
         </div>
 
@@ -106,6 +113,7 @@
             <a href="/pages/services.html">Usługi</a>
             <a href="/pages/portfolio.html">Nasze prace</a>
             <a href="/pages/contact.html">Kontakt</a>
+            <a href="policy.html">Polityka prywatności i cookies</a>
         </div>
 
         <div class="footer-bottom">

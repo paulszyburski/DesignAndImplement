@@ -1,5 +1,7 @@
 from contextlib import asynccontextmanager
 import os
+import logging
+import smtplib
 import sqlite3
 from typing import Annotated
 
@@ -7,6 +9,8 @@ from fastapi import FastAPI, Form
 from fastapi.responses import PlainTextResponse
 
 from .notifications import send_quote_notification
+
+logger = logging.getLogger(__name__)
 
 DB_PATH = os.environ.get(
     "QUOTES_DB_PATH", "/home/paul/Projects/designandimplement/data/quotes.db"
@@ -44,8 +48,6 @@ def submit_quote(
     message: Annotated[str, Form()] = "",
 ):
 
-    send_quote_notification(name, email, phone, message)
-
     with sqlite3.connect(DB_PATH) as conn:
         conn.execute(
             """
@@ -55,7 +57,11 @@ def submit_quote(
             (name, email, phone, message)
         )
 
-    
+    # A notification failure must not undo a saved quote or invite a duplicate.
+    try:
+        send_quote_notification(name, email, phone, message)
+    except (smtplib.SMTPException, OSError):
+        logger.error("Quote saved, but notification email failed")
 
     return "Dziękujemy! Otrzymaliśmy Twoje zgłoszenie."
 

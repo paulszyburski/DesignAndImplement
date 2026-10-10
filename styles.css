@@ -787,3 +787,108 @@ body {
 .footer-right a:focus-visible {
     text-decoration: underline;
 }
+
+/* Quote confirmation and policy */
+[hidden] {
+    display: none !important;
+}
+
+.quote-page .quote-form .quote-remember {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font: 14px/1.5 Arial, sans-serif;
+    cursor: pointer;
+}
+
+.quote-page .quote-form .quote-remember input {
+    width: 18px;
+    height: 18px;
+    min-height: 18px;
+    margin: 2px 0 0;
+    padding: 0;
+    flex-shrink: 0;
+    accent-color: #2b431d;
+}
+
+.quote-form-note a,
+.quote-notice a {
+    color: inherit;
+    text-underline-offset: 3px;
+}
+
+.quote-page .quote-button:disabled {
+    opacity: 0.75;
+    cursor: default;
+}
+
+#quote-status:empty {
+    display: none;
+}
+
+.quote-notice {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 100;
+    width: min(360px, calc(100vw - 32px));
+    padding: 24px 44px 24px 24px;
+    border: 1px solid #b9c0a7;
+    border-left: 5px solid #2b431d;
+    border-radius: 10px;
+    background: #fffdf6;
+    color: #24382e;
+    box-shadow: 0 10px 36px rgba(25, 42, 20, 0.2);
+    font: 15px/1.5 Arial, sans-serif;
+    max-height: calc(100dvh - 32px);
+    overflow-y: auto;
+    overflow-wrap: anywhere;
+}
+
+.quote-notice strong {
+    font-size: 18px;
+}
+
+.quote-notice p {
+    margin: 10px 0;
+}
+
+.quote-notice-close {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.quote-notice :focus-visible,
+.quote-remember input:focus-visible {
+    outline: 3px solid #55683b;
+    outline-offset: 3px;
+}
+
+.policy-page {
+    width: min(100%, 850px);
+    overflow-wrap: anywhere;
+}
+
+.policy-page section {
+    margin-bottom: 36px;
+}
+
+.policy-page li {
+    margin-bottom: 10px;
+    line-height: 1.65;
+}
+
+@media (max-width: 600px) {
+    .quote-notice {
+        right: 16px;
+        bottom: 16px;
+    }
+}
