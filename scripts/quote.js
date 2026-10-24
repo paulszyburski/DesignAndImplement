@@ -26,7 +26,7 @@
             const secure = location.protocol === "https:" ? "; Secure" : "";
             document.cookie = `${cookieName}=1; Max-Age=${maxAge}; Path=/; SameSite=Lax${secure}`;
         } catch {
-            // Saving a quote must still work when cookies are unavailable.
+            return;
         }
     }
 
@@ -74,7 +74,6 @@
     if (remember) remember.closest("label").hidden = false;
     if (wasSent()) showSent();
 
-    // Recheck when returning through browser history or from another tab.
     window.addEventListener("pageshow", () => {
         if (wasSent() || sentThisVisit) showSent();
         else if (button && !sending) {
@@ -131,7 +130,7 @@
             writeCookie(0);
             document.querySelector("#cookie-status").textContent = wasSent()
                 ? "Nie udało się usunąć zapamiętania. Usuń plik cookie w ustawieniach przeglądarki."
-                : "Usunięto zapamiętanie w tej przeglądarce. Zapisane zapytanie pozostaje u nas — w sprawie jego usunięcia skontaktuj się z nami.";
+                : "Usunięto zapamiętanie w tej przeglądarce. Zapisane zapytanie pozostaje u nas. W sprawie jego usunięcia skontaktuj się z nami.";
             if (notice && !wasSent()) notice.hidden = true;
         });
     }

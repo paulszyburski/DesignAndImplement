@@ -1,8 +1,9 @@
 from contextlib import asynccontextmanager
-import os
 import logging
+import os
 import smtplib
 import sqlite3
+from pathlib import Path
 from typing import Annotated
 
 from fastapi import FastAPI, Form
@@ -12,14 +13,15 @@ from .notifications import send_quote_notification
 
 logger = logging.getLogger(__name__)
 
-DB_PATH = os.environ.get(
-    "QUOTES_DB_PATH", "/home/paul/Projects/designandimplement/data/quotes.db"
-)
+DEFAULT_DB_PATH = Path(__file__).resolve().parent.parent / "data" / "quotes.db"
+DB_PATH = Path(os.environ.get("QUOTES_DB_PATH", DEFAULT_DB_PATH))
 
 
 def init_db():
+    DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     with sqlite3.connect(DB_PATH) as conn:
-        conn.execute("""
+        conn.execute(
+            """
             CREATE TABLE IF NOT EXISTS quotes (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 name TEXT NOT NULL,
@@ -28,11 +30,12 @@ def init_db():
                 message TEXT,
                 created_at DATETIME DEFAULT CURRENT_TIMESTAMP
             )
-        """)
+            """
+        )
 
 
 @asynccontextmanager
-async def lifespan(app: FastAPI):
+async def lifespan(_app: FastAPI):
     init_db()
     yield
 
@@ -47,17 +50,15 @@ def submit_quote(
     phone: Annotated[str, Form()] = "",
     message: Annotated[str, Form()] = "",
 ):
-
     with sqlite3.connect(DB_PATH) as conn:
         conn.execute(
             """
             INSERT INTO quotes (name, email, phone, message)
             VALUES (?, ?, ?, ?)
             """,
-            (name, email, phone, message)
+            (name, email, phone, message),
         )
 
-    # A notification failure must not undo a saved quote or invite a duplicate.
     try:
         send_quote_notification(name, email, phone, message)
     except (smtplib.SMTPException, OSError):

@@ -1,4 +1,3 @@
-"""Submission checks use a temporary database and never send email."""
 import importlib
 import os
 import smtplib
@@ -15,7 +14,7 @@ class QuoteSubmissionTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
-        self.path = str(Path(self.temp.name) / 'quotes.db')
+        self.path = Path(self.temp.name) / 'quotes.db'
         self.environment = patch.dict(os.environ, {
             'SMTP_USER': 'test@example.com',
             'SMTP_APP_PASSWORD': 'test-only',

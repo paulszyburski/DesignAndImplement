@@ -15,8 +15,6 @@ body {
     color: #24382E;
 }
 
-/* Navigation */
-
 .navigation {
     display: flex;
     align-items: center;
@@ -26,8 +24,6 @@ body {
     margin-bottom: 24px;
     background-color: #2b431d;
     color: #f7f0db;
-    /* color: #F7F5EF */
-    /* color: #f1fbd8 */
 }
 
 .quote-button {
@@ -93,8 +89,6 @@ body {
     text-underline-offset: 5px;
 }
 
-/* Garden banner */
-
 .hero {
     text-align: center;
     margin-bottom: 120px;
@@ -102,46 +96,27 @@ body {
 
 .garden {
     position: relative;
-
-    /*
-        Prevents the banner from becoming too short
-        for the form on narrower screens.
-    */
     min-height: 360px;
-
     overflow: hidden;
 }
 
 .garden-banner {
     display: block;
     width: 100%;
-
-    /*
-        The image now fills the garden container
-        instead of controlling its height.
-    */
     height: clamp(360px, 42vw, 620px);
-
     object-fit: cover;
 }
 
 .garden-overlay {
     position: absolute;
     inset: 0;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     padding: 16px;
-
     background-color: rgba(0, 0, 0, 0.3);
     color: #f7f0db;
-
-    /*
-        Safety in case something is still too large.
-    */
     overflow: hidden;
 }
 
@@ -159,23 +134,13 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-
     width: min(85%, 380px);
-
-    /*
-        Important: the form can never be wider
-        or taller than the overlay.
-    */
     max-width: 100%;
     max-height: calc(100% - 32px);
-
     padding: clamp(12px, 2vw, 20px);
-
     background-color: rgba(247, 240, 219, 0.682);
     border-radius: 14px;
-
     color: #2b431d;
-
     overflow: hidden;
 }
 
@@ -183,29 +148,17 @@ body {
 .garden-overlay textarea {
     width: 100%;
     min-width: 0;
-
     padding: 14px 16px;
-
     border: none;
     border-radius: 10px;
-
     background-color: #f7f0db;
     color: #2b431d;
-
     font: inherit;
     font-size: 16px;
-
     outline: none;
-
-    /*
-        Reduced from 60px so the fields can shrink
-        when the banner is smaller.
-    */
     min-height: 48px;
     max-height: 100px;
-
     resize: none;
-
     flex-shrink: 1;
 }
 
@@ -222,11 +175,6 @@ body {
 
 .garden-overlay textarea {
     min-height: 80px;
-
-    /*
-        Keep textarea from being manually resized
-        outside of the form.
-    */
     resize: none;
 }
 
@@ -234,11 +182,8 @@ body {
     margin: 32px 16px;
 }
 
-/* Footer */
-
 .footer {
     margin-top: auto;
-
     background-color: #2b431d;
     color: #f7f0db;
     padding: 22px 32px 14px;
@@ -295,8 +240,6 @@ body {
     font-size: 13px;
 }
 
-/* Smaller screens */
-
 @media (max-width: 800px) {
     .navigation {
         justify-content: center;
@@ -322,7 +265,6 @@ body {
 
     .garden-overlay form {
         width: min(92%, 360px);
-
         padding: 12px;
         gap: 8px;
     }
@@ -379,7 +321,6 @@ body {
         font-size: 22px;
     }
 }
-/* About and contact pages */
 .content-page {
     width: min(1120px, calc(100% - 40px));
     margin: 0 auto 80px;
@@ -581,7 +522,6 @@ body {
     }
 }
 
-/* Quote form: let the banner grow with its content. */
 .quote-page .garden {
     min-height: 0;
 }
@@ -691,7 +631,6 @@ body {
     margin: 32px 0;
 }
 
-/* Homepage */
 .home-quote-link {
     text-decoration: none;
     text-align: center;
@@ -788,7 +727,6 @@ body {
     text-decoration: underline;
 }
 
-/* Quote confirmation and policy */
 [hidden] {
     display: none !important;
 }

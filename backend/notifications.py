@@ -4,6 +4,7 @@ from email.message import EmailMessage
 
 from .config import SMTP_USER, SMTP_APP_PASSWORD, OWNER_EMAIL
 
+
 def send_quote_notification(name, email, phone="", message_text=""):
     message = EmailMessage()
     message["Subject"] = "New quote request"
@@ -28,10 +29,3 @@ def send_quote_notification(name, email, phone="", message_text=""):
     ) as smtp:
         smtp.login(SMTP_USER, SMTP_APP_PASSWORD)
         smtp.send_message(message)
-
-if __name__ == "__main__":
-    send_quote_notification(
-        name="Test Customer",
-        email="customer@example.com",
-        phone="Test phone",
-    )
