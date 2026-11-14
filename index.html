@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design and Implement | Projektowanie, budowanie, pielęgnowanie ogrodów</title>
     <meta name="description" content="Projektowanie, realizacja i pielęgnacja ogrodów. Poznaj Design and Implement i zaplanuj przestrzeń do odpoczynku wokół swojego domu.">
-    <link rel="stylesheet" href="styles.css?v=12">
+    <link rel="stylesheet" href="styles.css?v=19">
     <script src="scripts/quote.js?v=1" defer></script>
+    <script src="scripts/garden-video.js?v=3" defer></script>
 </head>
 
-<body>
+<body class="home-background-video">
+    <canvas class="garden-scroll-video" width="1280" height="720" data-frame-count="361" aria-hidden="true"></canvas>
     <header class="navigation">
         <a class="brand" href="index.html">
             <img src="assets/garden-logo-green-circle.png" alt="" width="64">
@@ -75,6 +77,84 @@
                     </article>
                 </div>
             </section>
+            <section class="garden-process" aria-labelledby="garden-process-title">
+                <div class="garden-process-intro">
+                    <h2 id="garden-process-title">Najpierw poznajemy miejsce</h2>
+                    <p class="page-lead">Nie każdy ogród trzeba urządzać od nowa. Czasem wystarczy poprawić układ rabat, dosadzić drzewa albo znaleźć lepsze miejsce na taras.</p>
+                </div>
+                <article class="garden-process-step" aria-labelledby="garden-step-1">
+                    <div class="garden-process-copy" lang="la">
+                        <h3 id="garden-step-1">Lorem ipsum dolor</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget ligula vitae justo consequat suscipit. Nulla facilisi. Sed interdum, nibh at malesuada posuere, lectus urna dictum massa, eu fermentum erat neque non ipsum.</p>
+                        <div lang="la">
+                            <p>In principio hortus animo nascitur. Inter arbores et flores spatium quietis quaerimus. Sol matutinus super folia lucet, et aura lenis per semitas transit.</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="garden-process-step" aria-labelledby="garden-step-2">
+                    <div class="garden-process-copy" lang="la">
+                        <h3 id="garden-step-2">Donec vitae erat</h3>
+                        <p>Donec vitae erat ac libero tincidunt malesuada. Aenean commodo, felis ut cursus volutpat, neque sapien finibus tellus, quis posuere lorem lacus sed nibh. Aliquam erat volutpat. Morbi sit amet urna vitae velit interdum porta.</p>
+                        <div lang="la">
+                            <p>Terra sub pedibus multas historias narrat. Umbra arborum per diem movetur, dum aqua inter lapides viam invenit. Omnia suo loco observamus et naturae voces audimus.</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="garden-process-step" aria-labelledby="garden-step-3">
+                    <div class="garden-process-copy" lang="la">
+                        <h3 id="garden-step-3">Nulla facilisi</h3>
+                        <p>Nulla facilisi. Curabitur tempor ligula eget metus vestibulum, vel blandit magna pulvinar. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed euismod tellus sit amet neque varius.</p>
+                        <div lang="la">
+                            <p>Lineae in charta paulatim in hortum mutantur. Hic semita curva ducit, illic pratum apertum manet. Forma et natura concordiam in spatio communi inveniunt.</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="garden-process-step" aria-labelledby="garden-step-4">
+                    <div class="garden-process-copy" lang="la">
+                        <h3 id="garden-step-4">Praesent vel augue</h3>
+                        <p>Praesent vel augue ut nibh volutpat tincidunt. Fusce consequat sem a mauris feugiat, non luctus risus faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Etiam viverra nisi vel arcu.</p>
+                        <div lang="la">
+                            <p>Salvia et rosa iuxta gramina crescunt. Colores temporum inter se colloquuntur, et lapides calorem solis servant. Folia viridia quietem oculis praebent.</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="garden-process-step" aria-labelledby="garden-step-5">
+                    <div class="garden-process-copy" lang="la">
+                        <h3 id="garden-step-5">Integer sed massa</h3>
+                        <p>Integer sed massa id elit fringilla aliquam. Suspendisse potenti. Nam mattis orci at nunc placerat, in feugiat odio consequat. Donec ornare, turpis vitae sagittis suscipit, justo lorem ultrices neque, vel interdum enim urna at nisl.</p>
+                        <div lang="la">
+                            <p>Terra diligenter parata novam vitam accipit. Radices locum firmum desiderant, et aqua lente in solum descendit. Patientia parva opera in magnum opus coniungit.</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="garden-process-step" aria-labelledby="garden-step-6">
+                    <div class="garden-process-copy" lang="la">
+                        <h3 id="garden-step-6">Mauris lorem lectus</h3>
+                        <p>Mauris lorem lectus, dapibus non felis quis, vestibulum tincidunt justo. Quisque varius dui vitae turpis elementum vulputate. Nunc faucibus urna eget quam dignissim, a malesuada mi porttitor. Cras volutpat tortor eu sem luctus.</p>
+                        <div lang="la">
+                            <p>Per viam lapideam ad locum quietum ambulamus. Sub arbore vetere sedes viatorem exspectat. Procul strepitus urbis evanescit, et tempus lenius fluere videtur.</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="garden-process-step" aria-labelledby="garden-step-7">
+                    <div class="garden-process-copy" lang="la">
+                        <h3 id="garden-step-7">Sed tempus neque</h3>
+                        <p>Sed tempus neque vel lectus commodo, ac fermentum nulla ultrices. Phasellus faucibus erat quis velit iaculis, nec bibendum lacus posuere. Ut consequat massa eget augue accumsan, in scelerisque felis mattis. Duis eget ipsum eros.</p>
+                        <div lang="la">
+                            <p>Novae plantae in luce vespertina surgunt. Flores inter folia apparent, dum aves supra ramos cantant. Singulae partes tandem unum hortum efficiunt.</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="garden-process-step" aria-labelledby="garden-step-8">
+                    <div class="garden-process-copy" lang="la">
+                        <h3 id="garden-step-8">Vivamus eget arcu</h3>
+                        <p>Vivamus eget arcu at erat blandit egestas. Maecenas luctus nisl vel justo cursus interdum. Nunc sed sapien non lacus finibus consectetur. Aliquam gravida augue nec risus condimentum, vitae porttitor elit efficitur. Aenean vitae neque.</p>
+                        <div lang="la">
+                            <p>Ver flores affert, aestas umbram donat. Autumnus folia aurea spargit, hiems terram silentio tegit. Hortus semper mutatur, et cura nostra cum temporibus redit.</p>
+                        </div>
+                    </div>
+                </article>
+            </section>
             <section class="page-cta" aria-labelledby="home-cta-title">
                 <div>
                     <h2 id="home-cta-title">Planujesz prace w ogrodzie?</h2>
@@ -95,7 +175,7 @@
 
             <div class="footer-right">
                 <p><a href="tel:+48535920800">+48 535 920 800</a></p>
-                <p>biro@designandimplement.com.pl</p>
+                <p>biuro@designandimplement.com.pl</p>
             </div>
         </div>
 
